@@ -11,16 +11,4 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
-//1. HTTP METHOD: GET
-//2. URI: '/'
-//3. FUNCTION: Controller@method
-
-Route::get('/test', 'TestController@index')->name('test.index');
-
-// POST, PUT, DELETE : CSRFVERIFY
-
-Route::post('/store', 'TestController@store')->name('test.store');
+Route::get('/', 'HomeController@index')->name('home.index');
